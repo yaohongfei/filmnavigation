@@ -1,0 +1,10 @@
+CREATE  TABLE `test`.`user` (
+  `userId` INT NOT NULL ,
+  `userName` VARCHAR(120) NOT NULL ,
+  `password` VARCHAR(120) NOT NULL ,
+  `level` INT NULL ,
+  `origin` VARCHAR(45) NULL ,
+  `extend1` VARCHAR(120) NULL ,
+  `extend2` VARCHAR(120) NULL ,
+  PRIMARY KEY (`userId`) ,
+  UNIQUE INDEX `userId_UNIQUE` (`userId` ASC) );

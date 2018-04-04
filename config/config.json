@@ -1,0 +1,13 @@
+{
+    "data": {
+    "client": "mysql",
+    "host" : "127.0.0.1",
+    "user" : "hoyao",
+    "password" : "ll520",
+    "database" : "test"
+},
+"server": {
+    "port": 8090,
+    "logPath": "./logs/"
+}
+}
