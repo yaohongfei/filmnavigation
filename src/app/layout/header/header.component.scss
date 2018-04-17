@@ -1,0 +1,58 @@
+.container {
+    display: -webkit-flex;
+    display: flex;
+    height: 80px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+/*搜索框6*/
+
+.bar6 input {
+    border: 2px solid green;
+    border-radius: 5px;
+    background: transparent;
+    width: 43%;
+    height: 50px;
+
+}
+.bar6 button {
+    background: green;
+    border-radius: 7px 7px 7px 7px;
+    width: auto;
+    min-width: 6%;
+    height: inherit;
+    border: 0px solid green;
+    margin-left: 3px;
+}
+.bar6 button:before {
+    content: "搜索";
+    font-size: initial;
+    color:white;
+}
+
+.search {
+    // margin: 0% 0% 0% 24%;
+    max-width: 60%;
+    display: flex;
+    flex-basis: 60%;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.img {
+    max-width: 30%;
+    flex-basis: 30%;
+    // margin-top: -11px;
+}
+
+.img-position{
+    margin-left: 25%;
+}
+
+.user {
+    flex-basis: 20%;
+    max-width: 20%;   
+}
