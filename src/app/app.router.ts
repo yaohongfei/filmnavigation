@@ -2,6 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
+import { LoginComponent } from './panel/login/login.component';
 
 const routes : Routes = [
     { 

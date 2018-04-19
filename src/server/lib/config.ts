@@ -2,7 +2,8 @@ import * as Joi from 'joi';
 
 export interface Configuration {
     data : DataConfiguration,
-    server : ServerConfiguration
+    server : ServerConfiguration,
+    api : ApiConfiguration
 }
 
 export interface DataConfiguration {
@@ -16,6 +17,10 @@ export interface DataConfiguration {
 export interface ServerConfiguration {
     port : string,
     logPath : "./logs/",
+}
+
+export interface ApiConfiguration {
+    dataApiUrl : string
 }
 
 export function loadConfig() : Configuration{
@@ -43,7 +48,11 @@ export function loadConfig() : Configuration{
         server: Joi.object().keys({
             port : Joi.number().required(),
             logPath : Joi.string().required()
-        })
+        }),
+
+        api : Joi.object().keys({
+            dataApiUrl : Joi.string().required()
+        }),
     }
 
     let result = Joi.validate(config , schema);

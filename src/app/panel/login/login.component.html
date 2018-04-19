@@ -1,0 +1,43 @@
+<div>
+        <div class="contain">
+                <div class="header" >
+                        <img src="../../../assets/img/logo.png" alt="logo" class="img"> 
+                
+                <div style="display:inline-block;">· {{title}}</div>
+
+                <button type="button" class="close" aria-label="Close" (click)="close()"><span aria-hidden="true">&times;</span></button>
+                
+                </div>    
+
+
+                <div *ngIf="operate === 'login'">
+                                
+                <div class="height"><input class="input-login" placeholder="请输入用户名" type="text" [(ngModel)]="login_user"  (keyup)="updateCursor()"/></div>
+                <div class="height"><input class="input-login" placeholder="请输入密码" type="password" [(ngModel)]="login_password" (keyup)="updateCursor()"/></div>
+                <div style="height: 25px;"><span *ngIf="errorMessage" class="error">{{errorMessage}}</span></div>
+                <input type="button" id="login" value="登录" class="input-button not-allowed" (click)="signIn()" 
+                (mouseover)="updateCursor()"    />
+                </div>   
+
+                <div *ngIf="operate === 'register'"> 
+                        <div class="height"><input placeholder="请输入用户名" class="input-login" type="text" [(ngModel)]="register_user" (keyup)="updateCursor()"/></div>
+                        <div class="height"><input placeholder="请输入密码" class="input-login" type="password" [(ngModel)]="register_password" (keyup)="updateCursor()"/></div>
+                        <div class="height"><input placeholder="请再次输入密码确认" class="input-login" type="password" [(ngModel)]="register_pwdConfirm" (keyup)="updateCursor()"/></div>
+                        <div style="height: 25px;"><span *ngIf="errorMessage" class="error">{{errorMessage}}</span></div>
+                        <input type="button" value="注册" id="register" class="input-button not-allowed" 
+                        (mouseover)="updateCursor()"    />
+                </div>   
+
+                <div *ngIf="operate === 'other'" style="min-height:150px;">
+                        <img src="../../../assets/img/weixin.png" alt="logo" class="pointer weixin" (click)="signInByWeixin">
+                </div>
+
+                <div class="footer">
+                        <span class="line-height pointer" style="margin-left: 3%;margin-right: 64%;" (click)="changeOperation()">{{titleEx}}</span>    
+                        <span *ngIf="title === '登录'" class="line-height pointer" (click)="otherLogin()">{{waysOfLogin}}</span>
+                </div>  
+
+        </div>    
+
+                     
+</div>

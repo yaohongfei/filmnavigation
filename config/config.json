@@ -9,5 +9,8 @@
 "server": {
     "port": 8090,
     "logPath": "./logs/"
-}
+},
+"api": {
+    "dataApiUrl": "http://localhost:8090/"
+  }
 }

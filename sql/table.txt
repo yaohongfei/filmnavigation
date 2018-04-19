@@ -1,4 +1,4 @@
-CREATE  TABLE `test`.`user` (
+CREATE  TABLE user (
   `userId` INT NOT NULL ,
   `userName` VARCHAR(120) NOT NULL ,
   `password` VARCHAR(120) NOT NULL ,
@@ -6,5 +6,6 @@ CREATE  TABLE `test`.`user` (
   `origin` VARCHAR(45) NULL ,
   `extend1` VARCHAR(120) NULL ,
   `extend2` VARCHAR(120) NULL ,
-  PRIMARY KEY (`userId`) ,
-  UNIQUE INDEX `userId_UNIQUE` (`userId` ASC) );
+  PRIMARY KEY (`userId`))
+  create  UNIQUE INDEX userName_origin_uq  on user(userName,origin) ;
+create index userName_index on user(userName)

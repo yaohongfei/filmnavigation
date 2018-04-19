@@ -12,8 +12,38 @@ export default class UserController extends BaseController {
                 path: '/user/{id}',
                 handler: 'getUserById',
                 config: { validate: this.getUserByIdValidate }
+            },
+            {
+                method : 'GET',
+                path : '/user/login/{user}/{password}',
+                handler : 'login',
+                config : {validate : this.loginValidate }
             }
         ];
+    }
+
+    public login(request:Hapi.Request,reply:Hapi.ReplyNoContinue) : void {
+        const db = (request.server.app.db as Knex);
+        const user : string = request.params['user'];
+        const password : string = request.params['password'];
+        db.select().from('user').where('userName','=',user)
+        .where('password','=',password)
+        .then(result =>  {
+                reply(result);
+        })
+        .catch(error => {
+            reply(Boom.badImplementation(error))
+        })
+        
+    }
+
+    private static get loginValidate () {
+        return {
+            params: {
+                user : Joi.alternatives().try(Joi.string()),
+                password : Joi.alternatives().try(Joi.string())
+            }
+        };
     }
 
     public getUserById(request: Hapi.Request, reply: Hapi.ReplyNoContinue): void {
