@@ -9,6 +9,7 @@ import { PanelModule } from './panel/panel.module';
 import { Service } from './service/service';
 import { UserService } from './service/user.service';
 import { CookieModule } from 'ngx-cookie';
+import { ReduxModule } from './redux/redux.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { CookieModule } from 'ngx-cookie';
     PanelModule,
     FormsModule,
     HttpModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
+    ReduxModule
   ],
   providers: [Service,UserService],
   bootstrap: [AppComponent]

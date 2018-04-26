@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CookieModule } from 'ngx-cookie';
+import { UserAction } from './user/api/actions/user.actions';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CookieModule } from 'ngx-cookie';
     HttpModule,
     CookieModule.forRoot()
   ],
-  providers: [],
+  providers: [UserAction],
   exports: [
     HeaderComponent,
     HomeComponent
