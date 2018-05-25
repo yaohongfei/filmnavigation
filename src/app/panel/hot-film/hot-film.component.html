@@ -11,4 +11,20 @@
     </div>
    
 </div>
-<div class="navigation"></div>
+<div class="navigation">
+    <div class="film_area">
+        <label class="label_style_area">地区</label>
+        <div class="area">
+            <div *ngFor="let area of areaList" class="attr">{{area.data_name}}</div>
+        </div>
+
+
+    </div>
+    <div class="film_type">
+        <label class="label_style_type">类型</label>
+        <div class="type">
+            <div *ngFor="let type of typeList" class="attr">{{type.data_name}}</div>
+        </div>
+    </div>
+
+</div>

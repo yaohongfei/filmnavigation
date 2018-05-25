@@ -15,6 +15,8 @@ export class HotFilmComponent implements OnInit {
     public imgPath : string;
     public currentId : number;
     public videoUrl : string ; 
+    public areaList : any[];
+    public typeList : any[];
 
     constructor(private serivce : Service,
         private router: Router) {
@@ -30,6 +32,18 @@ export class HotFilmComponent implements OnInit {
                 this.currentId = this.combineFilmList[0].homeFilm.id;
             }
         })
+
+        this.serivce.getRequest('film/attr').then(result => {
+            if (result) {
+                if ( result.area && result.area.length > 0 ) {
+                    this.areaList = result.area;
+                }
+                if( result.type && result.type.length > 0 ) {
+                    this.typeList = result.type;
+                }
+            }
+        })
+
     }
 
 

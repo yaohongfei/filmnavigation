@@ -1,0 +1,45 @@
+.play_frame {
+    background-color: rgba(27,27,28,.96);    
+    display: flex;
+    justify-content: space-between;
+}
+
+.play_frame1 {
+    width: 80%;
+    height: 80%;
+}
+
+.film_play {
+    margin-left: 10%;
+    height: 100%;
+    width: 90%;
+    max-width: 90%;
+}
+
+.film_name {
+    color: ghostwhite;
+    padding-left: 11%;
+    padding-top: 0.5%;
+    font-size: 20px;
+    height: 20%;
+}
+
+.film_right {
+    width: 20%;
+    background-color: rgba(27,27,28,.96); 
+    color: white;
+}
+
+.film_info {
+    background-color: white;
+    width: 90%;
+    margin-left: 2%;
+    font-size: 13px;
+    text-indent:2em; 
+}
+
+.brief {
+    // padding-left: 3%;
+    font-size: 25px;
+    padding-top: 1%;
+}

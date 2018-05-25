@@ -1,8 +1,30 @@
-<video id="film_play" width="1000" height="800" controls>
-    <source  [src]="filmUrlMp4" type="video/mp4" >
-    <source  [src]="filmUrlOgg" type="video/ogg">
-    <source  [src]="filmUrlWebm" type="video/webm">
-    <object  [data]="filmUrl" width="1000" height="800">
-    <embed  [src]="filmUrlSwf" width="1000" height="800">
-    </object>
-</video>
+<div>
+
+<div class="play_frame">    
+   <div class="play_frame1"> 
+        <video class="film_play" id="film_play" width="1300" height="740" controls>
+            <source  [src]="filmUrlMp4" type="video/mp4" >
+            <source  [src]="filmUrlOgg" type="video/ogg">
+            <source  [src]="filmUrlWebm" type="video/webm">
+            <object  [data]="filmUrl" width="1300" height="740">
+            <embed  [src]="filmUrlSwf" width="1300" height="740">
+            </object>
+        </video>
+        <label class="film_name">{{filmInfo.name}}</label>
+   </div>
+   <!-- <div class="film_right">
+   </div> -->
+</div>
+
+<div class="film_info">
+   <label class="brief">简介</label>
+   <hr style="margin-top: 0rem;" />
+   <div class="film_info">
+       <p>{{filmInfo.detailInfo}}</p>
+       
+   </div>
+
+</div>
+
+
+</div>

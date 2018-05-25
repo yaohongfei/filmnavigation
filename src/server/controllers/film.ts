@@ -18,8 +18,45 @@ export default class FilmController  extends BaseController{
                         path: '/film/{id}',
                         handler: 'getFilmInfoById',
                         config : { validate :  this.getFilmInfoByIdValidate }
+                    },
+                    {
+                        method : 'GET',
+                        path: '/film/attr',
+                        handler: 'getFilmAreaAndType'
                     }
                ];
+    }
+
+    public getFilmAreaAndType (request : Hapi.Request, reply : Hapi.ReplyNoContinue){
+        const db = request.server.app.db as Knex;
+        let keyList : string[] = ['FILM_TYPE','FILM_AREA'];
+        db.select().from('data_dictionary')
+        .whereIn('key',keyList)
+        .then((result : any) => {
+            if (result && result.length > 0 ) {
+                let areaList : any[] = [];
+                let typeList : any[] = [];
+                result.forEach( (data : any) => {
+                    if ( 'FILM_AREA' === data.key ){
+                        areaList.push(data);
+                    }    
+                    else {
+                        typeList.push(data);
+                    }
+                } );
+                let returnData : { [ key : string] : any } = {
+                    area : areaList,
+                    type : typeList
+                }
+                reply(returnData);
+            }
+            else {
+                reply(null);    
+            }
+        })
+        .catch(error => {
+            reply(Boom.badImplementation(error));
+        })
     }
 
     public getHomeFilm(request : Hapi.Request,reply : Hapi.ReplyNoContinue) {

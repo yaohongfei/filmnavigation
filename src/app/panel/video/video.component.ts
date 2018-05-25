@@ -32,6 +32,7 @@ export class VideoComponent implements OnInit {
             this.filmId = params['id'];
             if (this.filmId) {
                 this.service.getRequest("film/"+this.filmId).then( (film : Film) => {
+                    this.filmInfo = film;
                     this.filmUrl = this.sanitizer.bypassSecurityTrustResourceUrl(film.path);
                     this.filmUrlMp4 = this.sanitizer.bypassSecurityTrustResourceUrl(this.buildFilmPath(film.path) + '.mp4');
                     this.filmUrlOgg = this.sanitizer.bypassSecurityTrustResourceUrl(this.buildFilmPath(film.path) + '.ogg');
