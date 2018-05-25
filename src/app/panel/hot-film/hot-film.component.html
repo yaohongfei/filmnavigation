@@ -1,0 +1,14 @@
+<div class="main-page">
+    <div class="poster">
+       <a [routerLink]="[videoUrl,{id : currentId}]"  target="_blank"> 
+        <img  [src]='imgPath' class="img-film"/>
+       </a>
+    </div>
+    <div class="films-list"> 
+        <ul class="ul-film">
+            <li *ngFor="let combineFilm of combineFilmList" class="li-film"><a class="main-text" (mouseover)="mouseover(combineFilm)"  [routerLink]="[videoUrl,{id : currentId}]" target="_blank">{{combineFilm.homeFilm.description}}</a></li>
+        </ul>
+    </div>
+   
+</div>
+<div class="navigation"></div>

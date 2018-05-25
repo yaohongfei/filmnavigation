@@ -5,9 +5,9 @@ import { UserState } from '../models/userstate.model';
 @Injectable()
 export class UserAction {
     static readonly LOAD_USER = 'user/LOAD_USER';
-    // static readonly LOAD_USER_STARTED = 'user/LOAD_USER_STARTED';
-    // static readonly LOAD_USER_SUCCEEDED = 'user/LOAD_USER_SUCCEEDED';
-    // static readonly LOAD_USER_FAILED = 'user/LOAD_USER_FAILED';
+    static readonly LOAD_USER_STARTED = 'user/LOAD_USER_STARTED';
+    static readonly LOAD_USER_SUCCEEDED = 'user/LOAD_USER_SUCCEEDED';
+    static readonly LOAD_USER_FAILED = 'user/LOAD_USER_FAILED';
     static readonly LOAD_USER_CANCELLED = 'user/LOAD_USER_CANCELLED';
 
 
@@ -21,6 +21,13 @@ export class UserAction {
     cancelLoadUser = (payload : UserState) => ({
         type : UserAction.LOAD_USER_CANCELLED,
         payload
-    })  
+    });
+
+    
+    loadUserSuccess = () => ({
+        type : UserAction.LOAD_USER_SUCCEEDED,
+    })
+
+
     
 }

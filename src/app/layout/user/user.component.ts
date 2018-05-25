@@ -31,6 +31,7 @@ export class UserComponent implements OnInit {
     ){}
 
     ngOnInit() {
+    //    this.userAction.loadUser;
        this.userService.getUserCookie().then(user => {
             if(user){
                 this.loginUser = user;
@@ -39,8 +40,6 @@ export class UserComponent implements OnInit {
             }
        });
        this.userState$.subscribe((userState : UserState) => {
-        console.log(userState);
-        alert(userState);
     })
     }
 

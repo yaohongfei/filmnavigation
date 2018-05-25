@@ -12,11 +12,14 @@ export class Service{
         const requestUrl = URL.resolve('http://localhost:8090/',command);
         const options : RequestOptionsArgs = {
             method : method,
-            body : data
+            body : data,
+            withCredentials : true
+            
             // headers : 
         };
-
+        
         return this.http.request(requestUrl , options).toPromise().then((response : Response) => {
+            
             return response.json();
         })
         .catch(error => {

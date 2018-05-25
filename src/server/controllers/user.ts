@@ -26,10 +26,12 @@ export default class UserController extends BaseController {
         const db = (request.server.app.db as Knex);
         const user : string = request.params['user'];
         const password : string = request.params['password'];
+        
         db.select().from('user').where('userName','=',user)
         .where('password','=',password)
         .then(result =>  {
-                reply(result);
+            reply.state('yhf','good',{isSecure:false,isHttpOnly : false,path:'/'});
+            reply(result);
         })
         .catch(error => {
             reply(Boom.badImplementation(error))
@@ -52,7 +54,9 @@ export default class UserController extends BaseController {
         db.select()
             .from('user')
             .where('userId','=', parseInt(userId))
-            .then((result: any) => reply(result))
+            .then((result: any) => {
+                // reply.state('yhf','good',{isSecure:false,isHttpOnly : false});
+                reply(result)})
             .catch((err: any) => reply(Boom.badImplementation(err)));
     }
 

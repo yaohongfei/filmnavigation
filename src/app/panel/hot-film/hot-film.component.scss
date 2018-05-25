@@ -1,0 +1,52 @@
+.main-page {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: black;
+    height: 440px;
+    cursor: pointer;
+}
+
+.poster {
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+}
+
+.films-list {
+    width: 20%;
+    background-color: black;
+}
+
+.img-film {
+    margin-left: 7%;
+    max-height: 520px;
+}
+
+.ul-film {
+    height: 440px;
+}
+
+.li-film {
+    list-style: none;
+    height: 44px;
+    color: white;
+    margin-left: -5%;
+}
+
+.li-film :hover{ 
+    color : green;
+}
+
+.navigation {
+    background-color: rgba(27,27,28,.96);
+    height: 80px;
+    z-index: 999;
+    position: relative;
+}
+
+.main-text {
+    color: white;
+    text-decoration:none;
+}

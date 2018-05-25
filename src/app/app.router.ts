@@ -3,6 +3,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
 import { LoginComponent } from './panel/login/login.component';
+import { VideoComponent } from './panel/video/video.component';
 
 const routes : Routes = [
     { 
@@ -13,6 +14,10 @@ const routes : Routes = [
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path : 'video',
+        component : VideoComponent
       }
 ];
 

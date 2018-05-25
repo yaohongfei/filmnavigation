@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { CookieModule } from 'ngx-cookie';
 import { UserAction } from './user/api/actions/user.actions';
+import { PanelModule } from '../panel/panel.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { UserAction } from './user/api/actions/user.actions';
     NgbModule.forRoot(),
     FormsModule,
     HttpModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
+    PanelModule
   ],
   providers: [UserAction],
   exports: [

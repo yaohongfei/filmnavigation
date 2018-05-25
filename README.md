@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## npm run start 
 run `npm run start `  to start the application
+
+
+##在user中运用了redux和saga,仅为了学习，本项目中感觉使用略有鸡肋。
