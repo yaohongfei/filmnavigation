@@ -23,8 +23,23 @@ export default class FilmController  extends BaseController{
                         method : 'GET',
                         path: '/film/attr',
                         handler: 'getFilmAreaAndType'
+                    },
+                    {
+                        method : 'GET',
+                        path : '/film/search/{operate}/{condition}',
+                        handler : 'searchFilmByCondition',
+                        config : { validate : this.searchFilmByConditionValidate }
                     }
                ];
+    }
+
+
+    private static get searchFilmByConditionValidate () {
+        return {
+            params : {
+                
+            }
+        }
     }
 
     public getFilmAreaAndType (request : Hapi.Request, reply : Hapi.ReplyNoContinue){

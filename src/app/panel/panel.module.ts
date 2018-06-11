@@ -7,11 +7,13 @@ import { CookieModule } from 'ngx-cookie';
 import { HotFilmComponent } from './hot-film/hot-film.component';
 import { VideoComponent } from './video/video.component';
 import { RouterModule } from '@angular/router';
+import { SearchResultComponent } from './search-result/search-result.component';
 
 @NgModule({
     declarations : [LoginComponent,
         HotFilmComponent,
-        VideoComponent],
+        VideoComponent,
+        SearchResultComponent],
     imports : [CommonModule,
         FormsModule,
         HttpModule,
@@ -20,7 +22,8 @@ import { RouterModule } from '@angular/router';
     providers : [],
     exports : [LoginComponent,
         HotFilmComponent,
-        VideoComponent],
+        VideoComponent,
+        SearchResultComponent],
     entryComponents : [LoginComponent]
 })
 

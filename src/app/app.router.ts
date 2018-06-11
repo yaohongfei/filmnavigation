@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './layout/home/home.component';
 import { LoginComponent } from './panel/login/login.component';
 import { VideoComponent } from './panel/video/video.component';
+import { SearchResultComponent } from './panel/search-result/search-result.component';
 
 const routes : Routes = [
     { 
@@ -18,6 +19,10 @@ const routes : Routes = [
       {
         path : 'video',
         component : VideoComponent
+      },
+      {
+        path : 'search-result',
+        component : SearchResultComponent
       }
 ];
 
