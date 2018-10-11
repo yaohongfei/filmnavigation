@@ -9,6 +9,8 @@ import { HttpModule } from '@angular/http';
 import { CookieModule } from 'ngx-cookie';
 import { UserAction } from './user/api/actions/user.actions';
 import { PanelModule } from '../panel/panel.module';
+import { RouterModule } from '@angular/router';
+import { Routing } from '../app.router';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PanelModule } from '../panel/panel.module';
     FormsModule,
     HttpModule,
     CookieModule.forRoot(),
-    PanelModule
+    PanelModule,
+    RouterModule,
+    Routing
   ],
   providers: [UserAction],
   exports: [

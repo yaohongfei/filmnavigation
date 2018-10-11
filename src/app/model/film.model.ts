@@ -8,6 +8,10 @@ export interface Film {
     level? : string;
     img? : string;
     path : string;
+    director : string;
+    actors : string;
+    release_time : Date;
+    duration : string;
 }
 
 export interface HomeFilm {
@@ -23,3 +27,4 @@ export interface CombineFilm {
     film : Film,
     homeFilm : HomeFilm
 }
+

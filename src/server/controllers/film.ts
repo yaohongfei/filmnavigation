@@ -37,29 +37,53 @@ export default class FilmController  extends BaseController{
     private static get searchFilmByConditionValidate () {
         return {
             params : {
-                
+                "operate" : Joi.string(),
+                "condition" : Joi.string().required()
             }
         }
+    }
+
+    public searchFilmByCondition (request : Hapi.Request ,reply : Hapi.ReplyNoContinue) {
+        const db = request.server.app.db as Knex;
+        let operate = request.params['operate'];
+        let condition = request.params['condition'];
+        let query = null;
+        if ('byArea' === operate) {
+            query = db.select().from('film').where('area','=',condition);
+        } 
+        else if ('byType' === operate) {
+            query = db.select().from('film').where('type','=',condition);
+        } 
+        else {
+            query = db.select().from('film').where('name','like',`%${condition}%`);
+        }
+
+        query.then( (result : any ) => {
+            reply(result);
+        } ).catch((error : any) => {
+            reply(Boom.badImplementation(error));
+        })
     }
 
     public getFilmAreaAndType (request : Hapi.Request, reply : Hapi.ReplyNoContinue){
         const db = request.server.app.db as Knex;
         let keyList : string[] = ['FILM_TYPE','FILM_AREA'];
         db.select().from('data_dictionary')
-        .whereIn('key',keyList)
+        .whereIn('data_key',keyList)
         .then((result : any) => {
             if (result && result.length > 0 ) {
                 let areaList : any[] = [];
                 let typeList : any[] = [];
                 result.forEach( (data : any) => {
-                    if ( 'FILM_AREA' === data.key ){
+                    if ( 'FILM_AREA' === data.data_key ){
                         areaList.push(data);
                     }    
                     else {
                         typeList.push(data);
                     }
                 } );
-                let returnData : { [ key : string] : any } = {
+                let returnData : { [ key : string] :
+                     any } = {
                     area : areaList,
                     type : typeList
                 }

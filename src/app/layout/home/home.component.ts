@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit{
 
     public isLogin : boolean;
     public userName : string;
+    public operate : string='home';
     
     ngOnInit () {
         this.userState$.subscribe((userState : UserState) => {
@@ -28,5 +29,15 @@ export class HomeComponent implements OnInit{
             }
 
         })
+    }
+
+    get showHotPage () : boolean {
+        if ('byArea' === this.operate  || 'byType' === this.operate || 'home' === this.operate) {
+            return true;
+        }
+        else 
+        {
+            return false;
+        }
     }
 }

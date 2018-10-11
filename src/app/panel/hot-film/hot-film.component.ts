@@ -41,6 +41,8 @@ export class HotFilmComponent implements OnInit {
                 if( result.type && result.type.length > 0 ) {
                     this.typeList = result.type;
                 }
+            } else {
+                console.log(result);
             }
         })
 
