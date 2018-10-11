@@ -10,6 +10,7 @@ import { Router } from '@angular/router'
 
 export class HeaderComponent {
     
+    
     public searchCondition : string;
 
     constructor(private service : Service,
