@@ -1,6 +1,6 @@
-id,name,type,detailInfo,area,score,level,img,path
-1,复仇者联盟3,19,"银河系中的至尊霸主灭霸（乔什·布洛林饰）带着几个得力手下洗劫了全宇宙，只为了将所有的无限宝石镶嵌于金属手套上，这个手套可以将整个银河系毁灭于弹指间。为了拯救宇宙，托尼·斯塔克（小罗伯特·唐尼饰）和史蒂夫·罗杰斯（克里斯·埃文斯饰）需要摒弃前嫌，重组复仇者联盟，并与蜘蛛侠（汤姆·赫兰德饰）、奇异博士（本尼迪克特·康伯巴奇饰）、银河护卫队、黑豹（查德维克·博斯曼饰）以及瓦坎达人民的力量一同作战 [2]  。",3,8,1,/assets/img/poster/Avengers3.jpg,assets/video/test.mp4
-2,奔跑吧,3,"奔跑吧 兄弟",1,NULL,NULL,"no img",assets/video/test.mp4
-3,极限挑战,3,NULL,1,NULL,NULL,"no img",assets/video/test.mp4
-4,归去来,2,NULL,1,NULL,NULL,"no img",assets/video/test.mp4
-5,21克拉,1,NULL,1,NULL,NULL,"no img",assets/video/test.mp4
+id,name,type,detailInfo,area,score,level,img,path,director,actors,release_time,duration
+1,复仇者联盟3,19,"银河系中的至尊霸主灭霸（乔什·布洛林饰）带着几个得力手下洗劫了全宇宙，只为了将所有的无限宝石镶嵌于金属手套上，这个手套可以将整个银河系毁灭于弹指间。为了拯救宇宙，托尼·斯塔克（小罗伯特·唐尼饰）和史蒂夫·罗杰斯（克里斯·埃文斯饰）需要摒弃前嫌，重组复仇者联盟，并与蜘蛛侠（汤姆·赫兰德饰）、奇异博士（本尼迪克特·康伯巴奇饰）、银河护卫队、黑豹（查德维克·博斯曼饰）以及瓦坎达人民的力量一同作战 [2]  。",3,8,1,/assets/img/poster/Avengers3.jpg,assets/video/test.mp4,导演,"唐尼,卷福",2018-04-06,110
+2,奔跑吧,3,"奔跑吧 兄弟",1,NULL,NULL,"no img",assets/video/test.mp4,导演,"唐尼,卷福",2018-04-06,120
+3,极限挑战,3,NULL,1,NULL,NULL,"no img",assets/video/test.mp4,导演,"唐尼,卷福",2018-04-06,125
+4,归去来,2,NULL,1,NULL,NULL,"no img",assets/video/test.mp4,导演,"唐尼,卷福",2018-04-06,115
+5,21克拉,1,NULL,1,NULL,NULL,"no img",assets/video/test.mp4,导演,"唐尼,卷福",2018-04-06,130

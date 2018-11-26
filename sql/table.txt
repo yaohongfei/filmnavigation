@@ -21,12 +21,16 @@ CREATE  TABLE `test`.`film` (
   `level` VARCHAR(45) NULL ,
   `img` VARCHAR(45) NOT NULL ,
   `path` VARCHAR(45) NOT NULL ,
+  `director` VARCHAR(45) NOT NULL ,
+  `actors` VARCHAR(45) NOT NULL ,
+  `release_time` DATE NOT NULL ,
+  `duration` VARCHAR(45) NOT NULL ,
   PRIMARY KEY (`id`) ,
   UNIQUE INDEX `filmId_UNIQUE` (`id` ASC) );
   
   
   CREATE  TABLE `test`.`data_dictionary` (
-  `key` VARCHAR(45) NOT NULL ,
+  `data_key` VARCHAR(45) NOT NULL ,
   `data_id` VARCHAR(45) NOT NULL ,
   `data_name` VARCHAR(45) NOT NULL ,
   `extend` VARCHAR(45) NULL);
