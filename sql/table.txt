@@ -6,9 +6,9 @@ CREATE  TABLE user (
   `origin` VARCHAR(45) NULL ,
   `extend1` VARCHAR(120) NULL ,
   `extend2` VARCHAR(120) NULL ,
-  PRIMARY KEY (`userId`))
+  PRIMARY KEY (`userId`));
   create  UNIQUE INDEX userName_origin_uq  on user(userName,origin) ;
-create index userName_index on user(userName)
+create index userName_index on user(userName);
 
 
 CREATE  TABLE `test`.`film` (
@@ -34,7 +34,8 @@ CREATE  TABLE `test`.`film` (
   `data_id` VARCHAR(45) NOT NULL ,
   `data_name` VARCHAR(45) NOT NULL ,
   `extend` VARCHAR(45) NULL);
-  
+  ALTER TABLE `test`.`data_dictionary` 
+ADD PRIMARY KEY (`data_key`, `data_id`) ;
   
   CREATE  TABLE `test`.`home_film` (
   `id` INT NOT NULL ,
@@ -45,30 +46,3 @@ CREATE  TABLE `test`.`film` (
   `extend` VARCHAR(45) NULL ,
   PRIMARY KEY (`id`) );
 
-  
-  
-insert into data_dictionary values('FILM_TYPE','1','爱情','');
-insert into data_dictionary values('FILM_TYPE','2','剧情','');
-insert into data_dictionary values('FILM_TYPE','3','喜剧','');
-insert into data_dictionary values('FILM_TYPE','4','伦理','');
-insert into data_dictionary values('FILM_TYPE','5','歌舞','');
-insert into data_dictionary values('FILM_TYPE','6','动漫','');
-insert into data_dictionary values('FILM_TYPE','7','武侠','');
-insert into data_dictionary values('FILM_TYPE','8','古装','');
-insert into data_dictionary values('FILM_TYPE','9','动作','');
-insert into data_dictionary values('FILM_TYPE','10','恐怖','');
-insert into data_dictionary values('FILM_TYPE','11','犯罪','');
-insert into data_dictionary values('FILM_TYPE','12','悬疑','');
-insert into data_dictionary values('FILM_TYPE','13','记录','');
-insert into data_dictionary values('FILM_TYPE','14','战争','');
-insert into data_dictionary values('FILM_TYPE','15','历史','');
-insert into data_dictionary values('FILM_TYPE','16','传记','');
-insert into data_dictionary values('FILM_TYPE','17','体育','');
-insert into data_dictionary values('FILM_TYPE','18','冒险','');
-insert into data_dictionary values('FILM_TYPE','19','科幻','');
-insert into data_dictionary values('FILM_TYPE','20','魔幻','');
-
-insert into data_dictionary values('FILM_AREA','1','爱情','');
-insert into data_dictionary values('FILM_AREA','2','港台','');
-insert into data_dictionary values('FILM_AREA','3','欧美','');
-insert into data_dictionary values('FILM_AREA','4','其他','');
