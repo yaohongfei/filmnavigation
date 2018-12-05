@@ -10,11 +10,11 @@ INSERT INTO `test`.`film` (`id`, `name`, `type`, `detailInfo`, `area`, `score`, 
 
 
 
-INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `description`, `extend`) VALUES ('1', '复仇者联盟3', '1', 'assets/img/poster/main/Avengers3.jpg', 'NULL', '复仇者联盟:十年布局，就此一战');
-INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `description`, `extend`) VALUES ('2', '奔跑吧', '2', 'assets/img/poster/main/benpaoba.jpg', 'NULL', '奔跑吧:水炮强击沙溢求放过');
-INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `description`, `extend`) VALUES ('3', '极限挑战', '3', 'assets/img/poster/main/jixiantiaozhan.jpg', 'NULL', '极限挑战：张艺兴玩业务篮球');
-INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `description`, `extend`) VALUES ('4', '归去来', '4', 'assets/img/poster/main/guiqulai.jpg', 'NULL', '归去来：罗晋唐嫣再度携手');
-INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `description`, `extend`) VALUES ('5', '21克拉', '5', 'assets/img/poster/main/21kela.jpg', 'NULL', '21克拉:热巴掌掴\"男小三\"');
+INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `extend`, `description`) VALUES ('1', '复仇者联盟3', '1', 'assets/img/poster/main/Avengers3.jpg', 'NULL', '复仇者联盟:十年布局，就此一战');
+INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `extend`, `description`) VALUES ('2', '奔跑吧', '2', 'assets/img/poster/main/benpaoba.jpg', 'NULL', '奔跑吧:水炮强击沙溢求放过');
+INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `extend`, `description`) VALUES ('3', '极限挑战', '3', 'assets/img/poster/main/jixiantiaozhan.jpg', 'NULL', '极限挑战：张艺兴玩业务篮球');
+INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `extend`, `description`) VALUES ('4', '归去来', '4', 'assets/img/poster/main/guiqulai.jpg', 'NULL', '归去来：罗晋唐嫣再度携手');
+INSERT INTO `test`.`home_film` (`id`, `name`, `index`, `img`, `extend`, `description`) VALUES ('5', '21克拉', '5', 'assets/img/poster/main/21kela.jpg', 'NULL', '21克拉:热巴掌掴\"男小三\"');
 
 
 
