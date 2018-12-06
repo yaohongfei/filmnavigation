@@ -40,4 +40,8 @@ export class HomeComponent implements OnInit{
             return false;
         }
     }
+
+    get ifLogin(): boolean {
+        return this.isLogin;
+    }
 }

@@ -9,10 +9,11 @@ export class Service{
     constructor(private http : Http){};
 
     private doRequest(command : string ,data : any, method : RequestMethod){
-        const requestUrl = URL.resolve('http://101.132.78.227:8090/',command);
+        // const requestUrl = URL.resolve('http://101.132.78.227:8090/',command);
+        const requestUrl = URL.resolve('http://localhost:8090/',command);
         let headers: Headers = new Headers();
         headers.append('Access-Control-Allow-Credentials', 'true');
-        headers.append('Access-Control-Allow-Origin', 'http://101.132.78.227:8090');
+        headers.append('Access-Control-Allow-Origin', 'http://localhost:8090');
         
         const options : RequestOptionsArgs = {
             method : method,

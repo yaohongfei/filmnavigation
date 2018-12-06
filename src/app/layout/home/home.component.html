@@ -1,8 +1,19 @@
 
+<div *ngIf="!ifLogin">
 <div *ngIf="!showHotPage">
 
 </div>
 
 <div *ngIf="showHotPage">
 <fn-hot></fn-hot>
+</div>
+
+</div>
+
+<div *ngIf="ifLogin">
+    <div style="width: 100%;
+    display: flex;
+    justify-content: center;">
+    <img src="/assets/img/meandwife.jpg" />
+    </div>
 </div>
